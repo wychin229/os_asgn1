@@ -1,0 +1,62 @@
+Student Name : Chin Wen Yuan
+Student ID   : 29975239
+
+User Documentation
+A. Compilation
+[1] First, user are to compile the c program (29975239_fileutil.c). This can be
+   done by going to the directory holding the .c file and run the following command 
+   in the terminal.
+   
+   gcc 29975239_fileutil.c -o fileutil
+   
+   the above command line entry will compile the program and produce an executable
+   name "fileutil".
+   
+   *In order to compile and run the program in the correct directory, you can 
+   either use the cd command to cd to the appropriate directory. Or you can use
+   Files (File manager/explorer) to navigate to the directory saving the .c file
+   and right-click on the mouse and select the "Open in terminal" option. This will
+   open the terminal and land you on the current directory. 
+
+[2] After the c program has compiled successfully, you can see that there is an
+   executable file name "fileutil" within the current directory. This is the 
+   compiled c program.
+   
+B. Program Manual
+Name:
+	fileutil - The following program is a multipurpose file utility, which 
+			   combines the simplified features of multiple Linux utilities 
+			   such as head, tail, cat and cp.
+
+Syntax:
+	./fileutil [sourcefile] [-d destdir] [-n numlines] [-L]
+	
+	[sourcefile]
+		The absolute file path of the source text file to be used.
+		(Ex. /home/student/Desktop/FIT2100/x.txt)
+		It MUST be the positioned first if specified.
+		Default is the sample.txt of the current directory. Hence, if this is
+		not specified, please create a non-empty sample.txt in the current
+		directory.
+		
+	[-d destdir] 
+		Is for specifying the absolute path of the destination directory that 
+		the copied text file will be created. 
+		(Note, the text file created will be of the same name as the source text file.)
+	    Ex. /home/student/Desktop/FIT2100/LABS/
+	    
+	[-n numlines]
+		Is for specifying the number of lines to be read/copied from the source
+		text file.
+		Default is 10 lines, if not specified.
+		
+	[-L]
+		Is for specifying that the operations reads from the end of the file. If
+		not used, the program will retrieve the first n/10 lines of the source
+		text file.
+
+Description:
+	The fileutil program is able to carry out the following operations:
+	[1] Output the first/last 10/n lines of source text file on to terminal.
+	[2] Copy the first/last 10/n lines of source text file to a new text file of 
+	    the same name in the destination directory specified.
